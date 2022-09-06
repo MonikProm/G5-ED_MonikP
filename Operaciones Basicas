@@ -1,0 +1,83 @@
+#include <iostream>
+
+#include <cstdlib> // Incluimos esta libreria que tiene la funcion exit();
+
+
+
+using namespace std;
+
+int opcion;
+
+float primero=1;
+
+float segundo=1;
+
+float resultado;
+
+
+
+int main(){
+
+
+
+cout << "Que operacion desea realizar Suma [1] Resta [2] Multiplicacion [3] Division [4]." << endl;
+
+
+
+cin >> opcion;
+
+if (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4 )
+
+{
+
+exit(EXIT_FAILURE); // Funcion para salir del programa, existen otras pero por ahora con esta está bien.
+
+}
+
+cout << "Ingrese un numero: ";
+
+cin >> primero;
+
+cout << "Ingrese un numero: ";
+
+cin >> segundo;
+
+
+
+if (opcion==1){
+
+    resultado = primero+segundo;
+
+}
+
+if (opcion==2){
+
+    resultado = primero-segundo;
+
+}
+
+if (opcion==3){
+
+    resultado = primero*segundo;
+
+}
+
+if (opcion==4){
+
+    resultado = primero/segundo;
+
+}
+
+
+
+cout << resultado;
+
+
+
+cin.ignore();
+
+cin.get(); // *Nota
+
+return 0;
+
+}
